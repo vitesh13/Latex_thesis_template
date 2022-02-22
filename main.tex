@@ -1,0 +1,43 @@
+%\documentclass[a4paper,11pt,dvipsnames]{article}
+\documentclass[11pt, a4paper, titlepage]{book}
+
+% load packages
+\input{packages/preamble}
+
+% enable line numbers
+\linenumbers
+% load commands
+\input{commands/mycommands}
+\input{commands/crystal_plasticity}
+\input{commands/commands}
+\input{commands/math_tensor}
+\input{commands/DRX_commands}
+
+\input{content/abbreviation_list}
+
+% title of the thesis
+\title{Full-field simulations of dynamic recrystallization}
+
+\makeglossaries
+\begin{document}
+\nonstopmode
+
+% title print
+\maketitle
+
+\tableofcontents
+\printglossary[type=\acronymtype,title=Abbreviations]
+\cleardoublepage
+
+% Introduction
+\include{content/Introduction}
+
+
+% references
+% to add DOI: https://tex.stackexchange.com/questions/367735/doi-in-reference
+%\bibliographystyle{IEEEtranN}
+\bibliographystyle{unsrtnat}
+\bibliography{library}
+
+\end{document}
+
